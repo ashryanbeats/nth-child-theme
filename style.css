@@ -24,21 +24,18 @@ hr {
   border-color: gray;
   background: gray; }
 
-.navbar-default {
-  background-color: #ffffff;
-  border: none; }
-
 .navbar-container {
   margin-top: 10px;
   padding: 0; }
-
-.navbar-brand {
-  font-size: 30px; }
-
-.menu-item {
-  background-color: #f1f1f1;
-  border-radius: 2px;
-  margin: 0 2px 0 0; }
+  .navbar-container .navbar-default {
+    background-color: #ffffff;
+    border: none; }
+  .navbar-container .navbar-brand {
+    font-size: 30px; }
+  .navbar-container .menu-item {
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    margin: 0 2px 0 0; }
 
 .excerpts article + article:before {
   content: "";

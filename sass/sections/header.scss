@@ -1,19 +1,19 @@
-.navbar-default {
-	background-color: #ffffff;
-	border: none;
-}
-
 .navbar-container {
 	margin-top: 10px;
 	padding: 0;
-}
 
-.navbar-brand {
-	font-size: 30px;
-}
+	.navbar-default {
+		background-color: #ffffff;
+		border: none;
+	}
 
-.menu-item {
-	background-color: #f1f1f1;
-	border-radius: 2px;
-	margin: 0 2px 0 0;
+	.navbar-brand {
+		font-size: 30px;
+	}
+
+	.menu-item {
+		background-color: #f1f1f1;
+		border-radius: 2px;
+		margin: 0 2px 0 0;
+	}
 }
