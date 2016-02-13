@@ -47,7 +47,8 @@ hr {
   background: gray; }
 
 .article-nav {
-  margin-top: 50px; }
+  margin-top: 50px;
+  margin-bottom: 25px; }
   .article-nav ul > li {
     list-style: none; }
 
@@ -55,7 +56,7 @@ footer {
   min-height: 100px;
   background-color: #e7e7e7;
   color: gray;
-  padding-top: 10px;
+  padding-top: 25px;
   padding-bottom: 20px; }
   footer li {
     list-style: none; }
