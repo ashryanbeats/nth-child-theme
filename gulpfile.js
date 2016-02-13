@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
@@ -14,7 +15,7 @@ gulp.task('default', function() {
 
     gulp.watch(['index.html'], function() {
     	runSeq('reload');
-    })
+    });
 });
 
 gulp.task('build', function() {
@@ -23,9 +24,10 @@ gulp.task('build', function() {
 
 gulp.task('buildCSS', function() {
     return gulp.src('./sass/main.scss')
-        //.pipe(plumber())
+        .pipe(plumber())
         .pipe(sass())
         .pipe(rename('style.css'))
+        .pipe(plumber.stop())
         .pipe(gulp.dest('./'));
 });
 

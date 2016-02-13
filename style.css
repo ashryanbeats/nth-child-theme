@@ -10,5 +10,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: nthchild
 */
-p {
-  background-color: red; }
+.navbar-default {
+  background-color: #ffffff;
+  border: none; }
+
+.navbar-container {
+  margin-top: 7px;
+  padding: 0; }
