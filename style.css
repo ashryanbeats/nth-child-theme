@@ -14,7 +14,8 @@ Text Domain: nthchild
   padding: 0; }
 
 .content-container {
-  min-height: calc(100vh - 100px - 80px); }
+  min-height: calc(100vh - 100px - 80px);
+  margin-bottom: 25px; }
 
 img {
   margin-bottom: 20px; }
@@ -47,8 +48,7 @@ hr {
   background: gray; }
 
 .article-nav {
-  margin-top: 50px;
-  margin-bottom: 25px; }
+  margin-top: 50px; }
   .article-nav ul > li {
     list-style: none; }
 

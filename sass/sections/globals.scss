@@ -8,6 +8,8 @@
 .content-container {
 	// Take up enough space that the footer doesn't float up
     min-height: calc(100vh - #{$footer-min-height} - 80px);
+
+    margin-bottom: 25px;
 }
 
 img {
