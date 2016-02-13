@@ -40,7 +40,7 @@ hr {
   border-radius: 2px;
   margin: 0 2px 0 0; }
 
-article + article:before {
+.excerpts article + article:before {
   content: "";
   display: block;
   margin: 20px auto 50px auto;
@@ -59,8 +59,8 @@ footer {
   background-color: #e7e7e7;
   color: gray;
   padding-top: 10px;
-  padding-bottom: 40px; }
+  padding-bottom: 20px; }
   footer li {
     list-style: none; }
-  footer .row > * {
-    padding: 0 0 25px 0; }
+  footer .row.footer-widgets {
+    padding-bottom: 25px; }
