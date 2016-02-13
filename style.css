@@ -18,6 +18,9 @@ Text Domain: nthchild
   margin-top: 10px;
   padding: 0; }
 
+.navbar-brand {
+  font-size: 30px; }
+
 .menu-item {
   background-color: #f1f1f1;
   border-radius: 2px;
