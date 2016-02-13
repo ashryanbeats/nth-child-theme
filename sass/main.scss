@@ -11,5 +11,14 @@ Tags:
 Text Domain: nthchild
 */
 
+img {
+	margin-bottom: 20px;
+}
+
+hr {
+	width: 50%;
+	border-color: gray;
+}
 
 @import 'sections/header';
+@import 'sections/excerpts';

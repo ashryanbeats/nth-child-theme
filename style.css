@@ -10,6 +10,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: nthchild
 */
+img {
+  margin-bottom: 20px; }
+
+hr {
+  width: 50%;
+  border-color: gray; }
+
 .navbar-default {
   background-color: #ffffff;
   border: none; }
@@ -25,3 +32,11 @@ Text Domain: nthchild
   background-color: #f1f1f1;
   border-radius: 2px;
   margin: 0 2px 0 0; }
+
+article + article:before {
+  content: "";
+  display: block;
+  margin: 20px auto 40px auto;
+  height: 1px;
+  width: 50%;
+  background: gray; }

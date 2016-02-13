@@ -1,0 +1,8 @@
+article + article:before {
+	content: "";
+    display: block;
+    margin: 20px auto 40px auto;
+    height: 1px;
+    width: 50%;
+    background: gray;
+}
