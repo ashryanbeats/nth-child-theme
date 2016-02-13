@@ -11,26 +11,7 @@ Tags:
 Text Domain: nthchild
 */
 
-@import 'variables';
-@import 'mixins';
-
-.container-fluid {
-	padding: 0;
-}
-
-.content-container {
-	// Take up enough space that the footer doesn't float up
-    min-height: calc(100vh - #{$footer-min-height} - 80px);
-}
-
-img {
-	margin-bottom: 20px;
-}
-
-hr {
-	@include hr;
-}
-
+@import 'sections/globals';
 @import 'sections/header';
 @import 'sections/excerpts';
 @import 'sections/article-nav';
