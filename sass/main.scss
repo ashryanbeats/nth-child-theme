@@ -11,13 +11,14 @@ Tags:
 Text Domain: nthchild
 */
 
+@import 'mixins';
+
 img {
 	margin-bottom: 20px;
 }
 
 hr {
-	width: 50%;
-	border-color: gray;
+	@include hr;
 }
 
 @import 'sections/header';

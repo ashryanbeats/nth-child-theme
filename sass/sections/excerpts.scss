@@ -1,8 +1,10 @@
+@import '../mixins';
+
 article + article:before {
 	content: "";
     display: block;
     margin: 20px auto 50px auto;
     height: 1px;
-    width: 50%;
-    background: gray;
+    
+    @include hr;
 }

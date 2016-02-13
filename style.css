@@ -15,7 +15,8 @@ img {
 
 hr {
   width: 50%;
-  border-color: gray; }
+  border-color: gray;
+  background: gray; }
 
 .navbar-default {
   background-color: #ffffff;
@@ -39,6 +40,7 @@ article + article:before {
   margin: 20px auto 50px auto;
   height: 1px;
   width: 50%;
+  border-color: gray;
   background: gray; }
 
 .article-nav {
