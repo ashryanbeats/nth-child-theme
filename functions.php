@@ -74,7 +74,7 @@ function nth_customize_excerpt($nth_excerpt) {
                             alt="' . get_the_title() . '" 
                             href="'. esc_url( get_permalink() ) . '"
                         >'
-                        . sprintf(__( 'Read more >' ), get_the_title()) 
+                        . sprintf(__( 'Read more >>' ), get_the_title()) 
                         . '</a>'; 
         $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
             
@@ -87,5 +87,13 @@ function nth_customize_excerpt($nth_excerpt) {
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'nth_customize_excerpt');
+
+function nth_get_the_archives_link() {
+    if(get_page_by_title('Archives')) {
+        $page = get_page_by_title('Archives');
+        $id = $page->ID;
+        echo '<li><a href="' . get_page_link($id) . '" alt="' . get_the_title( $page ) .'">Browse the archives</a></li>';
+    }
+}
 
 ?>
