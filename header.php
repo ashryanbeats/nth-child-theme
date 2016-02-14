@@ -6,12 +6,6 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>"/>
 	<title><?php wp_title(); ?></title>
 
-<!-- 	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-
-	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
- -->
 	<?php wp_head() ?>
 </head>
 
