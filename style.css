@@ -100,9 +100,19 @@ a {
   .article-nav ul > li {
     list-style: none; }
 
+.sidebar .widget ul {
+  padding-left: 0; }
+
+.sidebar .widget li {
+  list-style: none; }
+
 @media (max-width: 991px) {
-  .sidebar h2 {
+  .sidebar .widget h2 {
     text-align: center; }
+  .sidebar .widget ul {
+    text-align: center; } }
+
+@media (max-width: 991px) {
   .sidebar:before {
     content: "";
     display: block;
