@@ -16,4 +16,14 @@
 		border-radius: 2px;
 		margin: 0 2px 0 0;
 	}
+
+	// Styles for smaller screens
+	@media (max-width: 767px) {
+		text-align: center;
+
+		.navbar-brand {
+			float: none;
+			margin: 0 auto;
+		}
+	}
 }

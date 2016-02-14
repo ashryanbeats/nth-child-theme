@@ -37,6 +37,12 @@ hr {
     background-color: #f1f1f1;
     border-radius: 2px;
     margin: 0 2px 0 0; }
+  @media (max-width: 767px) {
+    .navbar-container {
+      text-align: center; }
+      .navbar-container .navbar-brand {
+        float: none;
+        margin: 0 auto; } }
 
 .excerpts article + article:before {
   content: "";
