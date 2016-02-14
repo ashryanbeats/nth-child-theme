@@ -19,3 +19,14 @@ img {
 hr {
 	@include hr;
 }
+
+a {
+ 	color: $pink;
+ 	text-decoration: none;
+	
+	&:hover, &:focus {
+		color: $blue;
+		text-decoration: none;
+	}
+} 
+

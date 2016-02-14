@@ -25,6 +25,13 @@ hr {
   border-color: gray;
   background: gray; }
 
+a {
+  color: #ff56aa;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #2a6496;
+    text-decoration: none; }
+
 .navbar-container {
   margin-top: 10px;
   padding: 0; }
@@ -32,11 +39,18 @@ hr {
     background-color: #ffffff;
     border: none; }
   .navbar-container .navbar-brand {
-    font-size: 30px; }
+    font-size: 30px;
+    color: #ff56aa; }
+    .navbar-container .navbar-brand:hover, .navbar-container .navbar-brand:focus {
+      color: #2a6496; }
   .navbar-container .menu-item {
     background-color: #f1f1f1;
     border-radius: 2px;
     margin: 0 4px 0 2px; }
+    .navbar-container .menu-item a {
+      color: #ff56aa; }
+      .navbar-container .menu-item a:hover, .navbar-container .menu-item a:focus {
+        color: #2a6496; }
   @media (max-width: 767px) {
     .navbar-container {
       text-align: center; }

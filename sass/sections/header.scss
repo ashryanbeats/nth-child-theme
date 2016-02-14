@@ -9,12 +9,25 @@
 
 	.navbar-brand {
 		font-size: 30px;
+		color: $pink;
+
+		&:hover, &:focus {
+				color: $blue;
+		}
 	}
 
 	.menu-item {
 		background-color: #f1f1f1;
 		border-radius: 2px;
 		margin: 0 4px 0 2px;
+
+		& a {
+			color: $pink;
+
+			&:hover, &:focus {
+				color: $blue;
+			}
+		}
 	}
 
 	// Styles for smaller screens
