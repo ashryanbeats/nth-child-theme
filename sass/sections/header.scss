@@ -7,14 +7,11 @@
 		border: none;
 	}
 
-	.navbar-header {
-		margin: 7.5px 0;
-	}
-
 	.navbar-brand {
 		font-size: 30px;
 		color: $pink;
 		height: 30px;
+		margin-top: 13px;
 		padding-top: 0;
 		padding-bottom: 0;
 
@@ -40,6 +37,10 @@
 	// Styles for smaller screens
 	@media (max-width: 767px) {
 		text-align: center;
+
+		.navbar-header {
+			margin: 7.5px 0;
+		}
 
 		.navbar-brand {
 			float: none;

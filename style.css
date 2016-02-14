@@ -38,12 +38,11 @@ a {
   .navbar-container .navbar {
     background-color: #ffffff;
     border: none; }
-  .navbar-container .navbar-header {
-    margin: 7.5px 0; }
   .navbar-container .navbar-brand {
     font-size: 30px;
     color: #ff56aa;
     height: 30px;
+    margin-top: 13px;
     padding-top: 0;
     padding-bottom: 0; }
     .navbar-container .navbar-brand:hover, .navbar-container .navbar-brand:focus {
@@ -59,6 +58,8 @@ a {
   @media (max-width: 767px) {
     .navbar-container {
       text-align: center; }
+      .navbar-container .navbar-header {
+        margin: 7.5px 0; }
       .navbar-container .navbar-brand {
         float: none;
         margin: 0 auto; }
@@ -75,6 +76,12 @@ a {
   width: 50%;
   border-color: gray;
   background: gray; }
+
+@media (max-width: 767px) {
+  .excerpts {
+    padding: 0; }
+    .excerpts h2, .excerpts p {
+      padding: 0 15px; } }
 
 .article-nav {
   margin-top: 50px; }
