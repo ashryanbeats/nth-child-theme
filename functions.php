@@ -113,7 +113,7 @@ function nth_initialize_widgets(){
     register_sidebar (array(
         'name' => __('Footer Widget Area 2', 'nth-child'),
         'id' => 'footer2', 
-        'description' => __('Appears in the footer section of the site. If Footer Widget Area 2 is being used, it will split the footer area with Footer Widget Area 1. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'nth-child'),
+        'description' => __('Appears in the footer section of the site. If Footer Widget Area 2 is being used, it will split the footer area with Footer Widget Area 1. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2. NOTE: This widget area will only show if Footer Widget Area 1 is active.', 'nth-child'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h2 class="widget-title">',
@@ -136,15 +136,17 @@ add_action('widgets_init', 'nth_initialize_widgets');
 
 function get_footer_widgets() {
     if (is_active_sidebar( 'footer1' )) {
+        echo '<div class="footer-widget-area">';
+        echo '<div class="container"> <!-- footer content container -->';
         echo '<div class="row footer-widgets"> <!-- footer widget row -->';
 
         if (is_active_sidebar( 'footer2' )) {
             
-            echo '<div class="col-md-6">';
+            echo '<div class="col-sm-6">';
                 dynamic_sidebar( 'footer1' );
             echo '</div>';
 
-            echo '<div class="col-md-6">';
+            echo '<div class="col-sm-6">';
                 dynamic_sidebar( 'footer2' );
             echo '</div>';
         
@@ -156,7 +158,10 @@ function get_footer_widgets() {
             echo '</div>';
 
         }
+
         echo '</div> <!-- footer widget row -->';
+        echo '</div> <!-- footer widget container -->';
+        echo '</div> <!-- footer widget area -->';
 
     }              
 }
