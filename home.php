@@ -6,15 +6,11 @@
 			<a href="<?php the_permalink() ?>" alt="<?php the_title() ?>">
 				<h2><?php the_title() ?></h2>
 				<?php the_post_thumbnail('blog-thumb'); ?>
-				<!-- blog excerpt -->
-				<?php the_excerpt() ?>
-				<!--categories-->
-				<!-- <?php locate_template('post-category.php', true, false) ?> -->
-				<!--hr test -->
-				<?php if( ($wp_query->current_post + 1) < ($wp_query->post_count) ) : ?>
-					<!-- insert hr unless it's the last post. -->
-				<?php endif ?>
 			</a>
+			<!-- blog excerpt -->
+			<?php the_excerpt() ?>
+			<!--categories-->
+			<!-- <?php locate_template('post-category.php', true, false) ?> -->
 		</article>		
 	<?php endwhile ?>
 
