@@ -7,9 +7,8 @@
 				<h2><?php the_title() ?></h2>
 				<?php the_post_thumbnail('blog-thumb'); ?>
 			</a>
-			<!-- blog excerpt -->
 			<?php the_excerpt() ?>
-			<!--categories-->
+
 			<!-- <?php locate_template('post-category.php', true, false) ?> -->
 		</article>		
 	<?php endwhile ?>

@@ -18,7 +18,10 @@ Text Domain: nthchild
   margin-bottom: 25px; }
 
 img {
-  margin-bottom: 20px; }
+  margin: 0 auto 20px auto;
+  display: block;
+  height: auto;
+  max-width: 100%; }
 
 hr {
   width: 50%;

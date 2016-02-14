@@ -13,7 +13,10 @@
 }
 
 img {
-	margin-bottom: 20px;
+	margin: 0 auto 20px auto;
+	display: block;
+	height: auto;
+	max-width: 100%;
 }
 
 hr {
