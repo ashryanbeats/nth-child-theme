@@ -55,8 +55,22 @@ hr {
 
 .article-nav {
   margin-top: 50px; }
+  .article-nav ul {
+    padding: 0; }
   .article-nav ul > li {
     list-style: none; }
+
+@media (max-width: 991px) {
+  .sidebar h2 {
+    text-align: center; }
+  .sidebar:before {
+    content: "";
+    display: block;
+    margin: 20px auto 50px auto;
+    height: 1px;
+    width: 50%;
+    border-color: gray;
+    background: gray; } }
 
 footer {
   min-height: 100px;

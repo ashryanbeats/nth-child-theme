@@ -1,6 +1,10 @@
 .article-nav {
 	margin-top: 50px;
 
+	ul {
+		padding: 0;
+	}
+
 	ul > li {
 		list-style: none;
 	}

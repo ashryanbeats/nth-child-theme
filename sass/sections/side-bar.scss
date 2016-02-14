@@ -1,0 +1,11 @@
+.sidebar {
+	@media (max-width: 991px) {
+		h2 {
+			text-align: center;
+		}
+
+		&:before{
+		    @include hr-like-content;
+		}
+	}
+}

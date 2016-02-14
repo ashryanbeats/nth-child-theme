@@ -2,11 +2,7 @@
 
 .excerpts {
 	article + article:before {
-		content: "";
-	    display: block;
-	    margin: 20px auto 50px auto;
-	    height: 1px;
-	    
-	    @include hr;
+
+	    @include hr-like-content;
 	}
 }
