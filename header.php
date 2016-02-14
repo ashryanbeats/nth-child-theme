@@ -16,11 +16,8 @@
 				<div class="navbar-header">
 					<h1 class="navbar-brand"><a href="<?php echo home_url() ?>" alt="<?php bloginfo('name') ?>"><?php bloginfo('name') ?></a></h1>
 				</div>
-				<ul class="nav navbar-nav">
-					<li class="menu-item active"><a href="#" alt="Articles">Articles</a></li>
-					<li class="menu-item"><a href="#" alt="Archives">Archives</a></li>
-					<li class="menu-item"><a href="#" alt="About">About</a></li>
-				</ul>
+
+				<?php nth_get_menu(); ?>	
 					
 				</div>
 			</nav>
