@@ -18,8 +18,6 @@
 				</div>
 
 				<?php nth_get_menu(); ?>	
-					
-				</div>
 			</nav>
 		</div> <!-- navbar container -->
 

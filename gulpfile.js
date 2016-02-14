@@ -13,7 +13,7 @@ gulp.task('default', function() {
         runSeq('buildCSS', 'reload');
     });
 
-    gulp.watch(['index.html'], function() {
+    gulp.watch(['index.html', '*.php'], function() {
     	runSeq('reload');
     });
 });
