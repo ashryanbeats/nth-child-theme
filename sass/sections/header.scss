@@ -21,7 +21,7 @@
 	}
 
 	.menu-item {
-		background-color: #f1f1f1;
+		background-color: $gray;
 		border-radius: 2px;
 		margin: 0 4px 0 2px;
 
@@ -29,6 +29,14 @@
 			color: $pink;
 
 			&:hover, &:focus {
+				color: $blue;
+			}
+		}
+
+		&.current-menu-item {
+			background-color: $dark-gray;
+
+			& a {
 				color: $blue;
 			}
 		}

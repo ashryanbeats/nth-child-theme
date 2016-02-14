@@ -55,6 +55,10 @@ a {
       color: #ff56aa; }
       .navbar-container .menu-item a:hover, .navbar-container .menu-item a:focus {
         color: #2a6496; }
+    .navbar-container .menu-item.current-menu-item {
+      background-color: #e7e7e7; }
+      .navbar-container .menu-item.current-menu-item a {
+        color: #2a6496; }
   @media (max-width: 767px) {
     .navbar-container {
       text-align: center; }
