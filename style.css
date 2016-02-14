@@ -35,12 +35,17 @@ a {
 .navbar-container {
   margin-top: 10px;
   padding: 0; }
-  .navbar-container .navbar-default {
+  .navbar-container .navbar {
     background-color: #ffffff;
     border: none; }
+  .navbar-container .navbar-header {
+    margin: 7.5px 0; }
   .navbar-container .navbar-brand {
     font-size: 30px;
-    color: #ff56aa; }
+    color: #ff56aa;
+    height: 30px;
+    padding-top: 0;
+    padding-bottom: 0; }
     .navbar-container .navbar-brand:hover, .navbar-container .navbar-brand:focus {
       color: #2a6496; }
   .navbar-container .menu-item {
@@ -56,7 +61,11 @@ a {
       text-align: center; }
       .navbar-container .navbar-brand {
         float: none;
-        margin: 0 auto; } }
+        margin: 0 auto; }
+      .navbar-container .navbar-nav {
+        margin: 0; }
+        .navbar-container .navbar-nav li {
+          margin: 0; } }
 
 .excerpts article + article:before {
   content: "";
