@@ -19,9 +19,7 @@ function nth_get_menu() {
         'menu'              => 'main',
         'theme_location'    => 'main',
         'depth'             => 1,
-        'container'         => 'div',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'		=> 'myNavbar',
+        'container'         => 'ul',
         'menu_class'        => 'nav navbar-nav'
     ));
 }
