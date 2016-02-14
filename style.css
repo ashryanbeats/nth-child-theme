@@ -72,6 +72,9 @@ a {
         .navbar-container .navbar-nav li {
           margin: 0; } }
 
+.excerpts p {
+  color: black; }
+
 .excerpts article + article:before {
   content: "";
   display: block;

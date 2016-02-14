@@ -1,6 +1,23 @@
 <?php get_header() ?>
 
 <div class="col-md-10 excerpts"> <!-- article column -->
+	<?php while ( have_posts()) : the_post(); ?>
+		<article>
+			<a href="<?php the_permalink() ?>" alt="<?php the_title() ?>">
+				<h2><?php the_title() ?></h2>
+				<?php the_post_thumbnail('blog-thumb'); ?>
+				<!-- blog excerpt -->
+				<?php the_excerpt() ?>
+				<!--categories-->
+				<!-- <?php locate_template('post-category.php', true, false) ?> -->
+				<!--hr test -->
+				<?php if( ($wp_query->current_post + 1) < ($wp_query->post_count) ) : ?>
+					<!-- insert hr unless it's the last post. -->
+				<?php endif ?>
+			</a>
+		</article>		
+	<?php endwhile ?>
+
 	<article>
 		<h2><a href="#" alt="Title">Title</a></h2>
 		<img class="img-responsive" src="http://i0.wp.com/ashryanbeats.com/wp-content/uploads/2016/01/image.jpeg?resize=1000%2C200">
