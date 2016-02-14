@@ -141,18 +141,18 @@ function get_footer_widgets() {
         if (is_active_sidebar( 'footer2' )) {
             
             echo '<div class="col-md-6">';
-                echo dynamic_sidebar( 'footer1' );
+                dynamic_sidebar( 'footer1' );
             echo '</div>';
 
             echo '<div class="col-md-6">';
-                echo dynamic_sidebar( 'footer2' );
+                dynamic_sidebar( 'footer2' );
             echo '</div>';
         
         }
         else {
 
             echo '<div class="col-md-12">';
-                echo dynamic_sidebar( 'footer1' );
+                dynamic_sidebar( 'footer1' );
             echo '</div>';
 
         }
