@@ -3,14 +3,7 @@
 
 		<footer>
 			<div class="container"> <!-- footer content container -->
-				<div class="row footer-widgets"> <!-- footer widget row -->
-					<div class="col-md-6">
-						<p><a href="http://github.com/ashryanbeats" alt="">GitHub</a></p>
-					</div>
-					<div class="col-md-6">
-						<p>footer text</p>
-					</div>
-				</div> <!-- footer widget row -->
+				<?php get_footer_widgets() ?>
 
 				<div class="row"> <!-- copyright widget row -->
 					<div class="col-md-12">

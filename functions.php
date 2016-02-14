@@ -97,31 +97,34 @@ function nth_get_the_archives_link() {
 }
 
 //Below are the widget areas
-function strips_widgets_init(){
-    // register_sidebar (array(
-    //     'name' => __('Footer Widget Area 1', 'strips'),
-    //     'id' => 'footer1', 
-    //     'description' => __('Appears in the footer section of the site. Takes up the full width of the footer area. If Footer Widget Area 2 is being used, both areas will take up half of the footer each. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'strips'),
-    //     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    //     'after_widget' => '</aside>',
-    //     'before_title' => '<h2 class="widget-title">',
-    //     'after_title' => '</h2>',
-    //     )
-    // );
-    // register_sidebar (array(
-    //     'name' => __('Footer Widget Area 2', 'strips'),
-    //     'id' => 'footer2', 
-    //     'description' => __('Appears in the footer section of the site. If Footer Widget Area 2 is being used, it will split the footer area with Footer Widget Area 1. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'strips'),
-    //     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    //     'after_widget' => '</aside>',
-    //     'before_title' => '<h2 class="widget-title">',
-    //     'after_title' => '</h2>',
-    //     )
-    // );
+function nth_initialize_widgets(){
+
+    register_sidebar (array(
+        'name' => __('Footer Widget Area 1', 'nth-child'),
+        'id' => 'footer1', 
+        'description' => __('Appears in the footer section of the site. Takes up the full width of the footer area. If Footer Widget Area 2 is being used, both areas will take up half of the footer each. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'nth-child'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+        )
+    );
+    
+    register_sidebar (array(
+        'name' => __('Footer Widget Area 2', 'nth-child'),
+        'id' => 'footer2', 
+        'description' => __('Appears in the footer section of the site. If Footer Widget Area 2 is being used, it will split the footer area with Footer Widget Area 1. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'nth-child'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+        )
+    );
+
     register_sidebar (array(
         'name' => __('Sidebar Widget Area', 'nth-child'),
         'id' => 'blog-sidebar',
-        'description' => __('The theme sidebar. Sits to the right of the main content area on large screens (limited to 300px in this case). Moves under the main content area on smaller screens (will dynamically resize in this case).', 'strips'),
+        'description' => __('The theme sidebar. Sits to the right of the main content area on large screens (limited to 300px in this case). Moves under the main content area on smaller screens (will dynamically resize in this case).', 'nth-child'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h2 class="widget-title">',
@@ -129,6 +132,33 @@ function strips_widgets_init(){
         )
     );
 }
-add_action('widgets_init', 'strips_widgets_init');
+add_action('widgets_init', 'nth_initialize_widgets');
+
+function get_footer_widgets() {
+    if (is_active_sidebar( 'footer1' )) {
+        echo '<div class="row footer-widgets"> <!-- footer widget row -->';
+
+        if (is_active_sidebar( 'footer2' )) {
+            
+            echo '<div class="col-md-6">';
+                echo dynamic_sidebar( 'footer1' );
+            echo '</div>';
+
+            echo '<div class="col-md-6">';
+                echo dynamic_sidebar( 'footer2' );
+            echo '</div>';
+        
+        }
+        else {
+
+            echo '<div class="col-md-12">';
+                echo dynamic_sidebar( 'footer1' );
+            echo '</div>';
+
+        }
+        echo '</div> <!-- footer widget row -->';
+
+    }              
+}
 
 ?>

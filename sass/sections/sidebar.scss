@@ -1,28 +1,28 @@
 .sidebar {
-	.widget {
-		ul {
-			padding-left: 0;
-		}
-
-		li {
-			list-style: none;
-		}
-
-		@media (max-width: 991px) {
-			h2 {
-				text-align: center;
-			}
-
-			ul {
-				text-align: center;
-			}
-		}
-	}
-
 	@media (max-width: 991px) {
 
 		&:before{
 		    @include hr-like-content;
+		}
+	}
+}
+
+.widget {
+	ul {
+		padding-left: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	@media (max-width: 991px) {
+		h2 {
+			text-align: center;
+		}
+
+		ul {
+			text-align: center;
 		}
 	}
 }

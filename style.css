@@ -100,18 +100,6 @@ a {
   .article-nav ul > li {
     list-style: none; }
 
-.sidebar .widget ul {
-  padding-left: 0; }
-
-.sidebar .widget li {
-  list-style: none; }
-
-@media (max-width: 991px) {
-  .sidebar .widget h2 {
-    text-align: center; }
-  .sidebar .widget ul {
-    text-align: center; } }
-
 @media (max-width: 991px) {
   .sidebar:before {
     content: "";
@@ -121,6 +109,18 @@ a {
     width: 50%;
     border-color: gray;
     background: gray; } }
+
+.widget ul {
+  padding-left: 0; }
+
+.widget li {
+  list-style: none; }
+
+@media (max-width: 991px) {
+  .widget h2 {
+    text-align: center; }
+  .widget ul {
+    text-align: center; } }
 
 footer {
   min-height: 100px;
