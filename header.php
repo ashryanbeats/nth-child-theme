@@ -14,7 +14,7 @@
 		<div class="container navbar-container"> <!-- navbar container -->
 			<nav class="navbar">
 				<div class="navbar-header">
-					<h1 class="navbar-brand"><a href="<?php echo home_url() ?>" alt="<?php bloginfo('name') ?>"><?php bloginfo('name') ?></a></h1>
+					<?php get_site_title() ?>
 				</div>
 
 				<?php nth_get_menu(); ?>	

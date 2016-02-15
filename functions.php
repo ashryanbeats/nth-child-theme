@@ -178,4 +178,13 @@ function get_featured_image_caption() {
     }
 }
 
+function get_site_title() {
+    if (is_home()) {
+        echo '<h1 class="navbar-brand">' . get_bloginfo('name') . '</h1>';
+    }
+    else {
+        echo '<div class="navbar-brand">' . get_bloginfo('name') . '</div>';
+    }
+}
+
 ?>

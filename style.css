@@ -81,7 +81,8 @@ pre code {
     height: 30px;
     margin-top: 13px;
     padding-top: 0;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    font-weight: 500; }
     .navbar-container .navbar-brand:hover, .navbar-container .navbar-brand:focus {
       color: #2a6496; }
   .navbar-container .menu-item {
