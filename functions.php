@@ -28,7 +28,7 @@ function nth_get_menu() {
 
 function nth_allow_tags_in_excerpt() {
     // Add custom tags to this string
-    return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>,<code>,<pre>,<blockquote>'; 
+    return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>,<code>,<pre>,<blockquote>,<strong>'; 
 }
 
 function nth_customize_excerpt($nth_excerpt) {

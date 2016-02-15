@@ -20,6 +20,10 @@ Text Domain: nthchild
 h1 {
   font-size: 30px; }
 
+h1, p {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+
 img, .wp-caption {
   margin: 20px auto 20px auto;
   display: block;
@@ -71,6 +75,12 @@ pre {
 pre code {
   overflow-wrap: normal;
   white-space: pre; }
+
+.post-date {
+  margin-top: -10px;
+  font-size: 11px;
+  font-style: italic;
+  color: #808080; }
 
 .navbar-container {
   margin-top: 10px;
@@ -129,8 +139,8 @@ pre code {
 @media (max-width: 767px) {
   .excerpts {
     padding: 0; }
-    .excerpts h2, .excerpts p {
-      padding: 0 15px; } }
+    .excerpts h2, .excerpts p, .excerpts iframe {
+      padding: 0 15px !important; } }
 
 .article-nav {
   margin-top: 50px; }

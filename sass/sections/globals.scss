@@ -16,6 +16,12 @@ h1 {
 	font-size: 30px;
 }
 
+h1, p {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+
 img, .wp-caption {
 	margin: 20px auto 20px auto;
 	display: block;
@@ -77,5 +83,12 @@ pre code {
     overflow-wrap: normal;
     white-space: pre;
 
+}
+
+.post-date {
+	margin-top: -10px;
+	font-size: 11px;
+	font-style: italic;
+	color: $darkest-gray;
 }
 
