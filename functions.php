@@ -260,5 +260,4 @@ function nth_get_the_category() {
 
     }
 }
-
 ?>

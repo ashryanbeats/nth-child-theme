@@ -10,6 +10,11 @@ Todos:
 - <s>control the number of posts that show up on `home.php`</s> (Controlled by user in Settings > Reading)
 - <s>sticky posts</s>
 - <s>remove date from pages</s>
+- <s>featured images link to permalink</s>
+- try search
+
+Off VVV:
+
+- test jetpack support
 - test markdown support
 - responsive video
-- featured images link to permalink
