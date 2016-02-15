@@ -17,6 +17,9 @@ Text Domain: nthchild
   min-height: calc(100vh - 100px - 80px);
   margin-bottom: 25px; }
 
+h1 {
+  font-size: 30px; }
+
 img, .wp-caption {
   margin: 20px auto 20px auto;
   display: block;
