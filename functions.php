@@ -154,11 +154,11 @@ function nth_get_footer_widgets() {
 
         if (is_active_sidebar( 'footer2' )) {
             
-            echo '<div class="col-sm-6">';
+            echo '<div class="col-sm-6 col-sm-offset-0 col-xs-6 col-xs-offset-3">';
                 dynamic_sidebar( 'footer1' );
             echo '</div>';
 
-            echo '<div class="col-sm-6">';
+            echo '<div class="col-sm-6 col-sm-offset-0 col-xs-6 col-xs-offset-3">';
                 dynamic_sidebar( 'footer2' );
             echo '</div>';
         
