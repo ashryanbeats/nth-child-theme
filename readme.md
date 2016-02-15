@@ -8,8 +8,8 @@ Todos:
 - <s>tag support</s> (don't need)
 - <s>image size filters ('home-thumb', large, medium, etc)</s>
 - <s>control the number of posts that show up on `home.php`</s> (Controlled by user in Settings > Reading)
-- sticky posts
-- remove date from pages
+- <s>sticky posts</s>
+- <s>remove date from pages</s>
 - test markdown support
 - responsive video
 - featured images link to permalink
