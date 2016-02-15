@@ -8,3 +8,4 @@ Todos:
 - tag support
 - test markdown support
 - image size filters ('home-thumb', large, medium, etc)
+- control the number of posts that show up on `home.php`
