@@ -12,8 +12,8 @@
     margin-bottom: 25px;
 }
 
-img {
-	margin: 0 auto 20px auto;
+img, .wp-caption {
+	margin: 20px auto 20px auto;
 	display: block;
 	height: auto;
 	max-width: 100%;
@@ -33,3 +33,27 @@ a {
 	}
 } 
 
+.feat-caption, .wp-caption-text {
+	font-style: oblique;
+	color: $darkest-gray;
+	display: block;
+	text-align: center;
+	margin: -15px 0 20px 0;
+}
+
+p, blockquote {
+	margin-bottom: 20px;
+}
+
+p + blockquote {
+	margin-top: -10px;
+}
+
+blockquote {
+	font-size: inherit;
+	color: $darkest-gray;
+	border-left: 5px solid #e7e7e7;
+	width: 85%;
+	padding: 0px 0px 0px 15px;
+	//margin: 0 0 20px 3%;
+}

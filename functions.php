@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support( 'post-thumbnails' );
+
 function nth_enqueue_styles() {
 	wp_register_style( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap');
@@ -164,6 +166,16 @@ function get_footer_widgets() {
         echo '</div> <!-- footer widget area -->';
 
     }              
+}
+
+function get_featured_image_caption() {
+    if (has_post_thumbnail()) {
+        $featured_image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
+    }
+
+    if ($featured_image_caption != "") {
+        echo '<span class="feat-caption">' . $featured_image_caption . '</span>';
+    }
 }
 
 ?>
