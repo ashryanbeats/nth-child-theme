@@ -24,8 +24,8 @@ function nth_initialize_widgets(){
         'description' => __('Appears in the footer section of the site. Takes up the full width of the footer area. If Footer Widget Area 2 is being used, both areas will take up half of the footer each. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'nth-child'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
         )
     );
     
@@ -35,8 +35,8 @@ function nth_initialize_widgets(){
         'description' => __('Appears in the footer section of the site. If Footer Widget Area 2 is being used, it will split the footer area with Footer Widget Area 1. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2. NOTE: This widget area will only show if Footer Widget Area 1 is active.', 'nth-child'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
         )
     );
 
