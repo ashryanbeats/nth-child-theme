@@ -2,10 +2,10 @@
 
 Todos:
 
-- `index.php`
-- `archive.php`
-- category support
-- tag support
+- <s>`index.php`</s>
+- <s>`archive.php`</s>
+- <s>category support</s>
+- <s>tag support</s> (don't need)
 - test markdown support
 - image size filters ('home-thumb', large, medium, etc)
 - control the number of posts that show up on `home.php`
