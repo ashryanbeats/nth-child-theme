@@ -199,8 +199,17 @@ function nth_get_site_title() {
 
 function nth_get_post_title() {
 
-    // h2 for home and archive
-    if (is_home() || is_archive()) {
+    // h1 for single and page only
+    if(is_single() || is_page()) {
+        echo '<h1>';
+            if (is_sticky()) {
+                echo 'Featured: ';
+            }
+            
+            echo '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a>';
+        echo '</h1>';
+    }    
+    else {
         echo '<h2>';
             if (is_sticky()) {
                 echo 'Featured: ';
@@ -209,16 +218,7 @@ function nth_get_post_title() {
             echo '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a>';
         echo '</h2>';
     }
-    else {
-        echo '<h1>';
-            if (is_sticky()) {
-                echo 'Featured: ';
-            }
-            
-            echo '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a>';
-        echo '</h1>';
 
-    }
 }
 
 function nth_get_featured_image() {

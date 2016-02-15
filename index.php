@@ -10,4 +10,4 @@
 
 </div> <!-- article column -->
 	
-<?php get_footer() ?>
+<?php get_sidebar() ?>
