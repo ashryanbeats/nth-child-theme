@@ -184,9 +184,7 @@ pre code {
   list-style: none; }
 
 @media (max-width: 767px) {
-  .widget h2 {
-    text-align: center; }
-  .widget ul {
+  .widget {
     text-align: center; } }
 
 footer {
