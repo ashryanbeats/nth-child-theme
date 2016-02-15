@@ -6,9 +6,9 @@ Todos:
 - <s>`archive.php`</s>
 - <s>category support</s>
 - <s>tag support</s> (don't need)
-- test markdown support
-- image size filters ('home-thumb', large, medium, etc)
-- control the number of posts that show up on `home.php`
+- <s>image size filters ('home-thumb', large, medium, etc)</s>
+- <s>control the number of posts that show up on `home.php`</s> (Controlled by user in Settings > Reading)
 - sticky posts
-- responsive video
 - remove date from pages
+- test markdown support
+- responsive video
