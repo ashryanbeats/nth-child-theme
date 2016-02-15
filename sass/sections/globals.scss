@@ -1,6 +1,15 @@
 @import '../utilities/variables';
 @import '../utilities/mixins';
 
+.container {
+	@media (min-width: 992px) {
+		width: 920px;
+	}
+	@media (min-width: 1200px) {
+		width: 1000px;
+	}
+}
+
 .container-fluid {
 	padding: 0;
 }

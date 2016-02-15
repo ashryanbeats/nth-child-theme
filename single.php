@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<div class="col-md-10 single"> <!-- article column -->
+<div class="col-sm-9 col-md-10 single"> <!-- article column -->
 	<?php while ( have_posts()) : the_post(); ?>
 
 		<article>

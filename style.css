@@ -10,6 +10,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive, bootstrap, minimal
 Text Domain: nthchild
 */
+@media (min-width: 992px) {
+  .container {
+    width: 920px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px; } }
+
 .container-fluid {
   padding: 0; }
 
