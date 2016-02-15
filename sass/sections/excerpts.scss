@@ -8,12 +8,4 @@
 	article + article:before {
 	    @include hr-like-content;
 	}
-
-	@media (max-width: 767px) {
-		padding: 0;
-
-		h2, p, iframe {
-			padding: 0 15px !important;
-		}
-	}
 }

@@ -101,3 +101,25 @@ pre code {
 	color: $darkest-gray;
 }
 
+.full-width-featured-images {
+	@media (max-width: 767px) {
+		padding: 0;
+
+		h1, h2, h3, h4, h5, h6, p, & > iframe, & > li, & > div, dl, address, .wp-caption {
+			padding: 0 15px !important;
+		}
+
+		pre {
+			border-radius: 0;
+		}
+
+		.wp-post-image {
+			width: 100%;
+		}
+
+		blockquote {
+			margin-left: 15px;
+		}
+
+	}
+}

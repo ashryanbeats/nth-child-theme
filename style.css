@@ -90,6 +90,18 @@ pre code {
   font-style: italic;
   color: #808080; }
 
+@media (max-width: 767px) {
+  .full-width-featured-images {
+    padding: 0; }
+    .full-width-featured-images h1, .full-width-featured-images h2, .full-width-featured-images h3, .full-width-featured-images h4, .full-width-featured-images h5, .full-width-featured-images h6, .full-width-featured-images p, .full-width-featured-images > iframe, .full-width-featured-images > li, .full-width-featured-images > div, .full-width-featured-images dl, .full-width-featured-images address, .full-width-featured-images .wp-caption {
+      padding: 0 15px !important; }
+    .full-width-featured-images pre {
+      border-radius: 0; }
+    .full-width-featured-images .wp-post-image {
+      width: 100%; }
+    .full-width-featured-images blockquote {
+      margin-left: 15px; } }
+
 .navbar-container {
   margin-top: 10px;
   padding: 0; }
@@ -143,12 +155,6 @@ pre code {
   width: 50%;
   border-color: gray;
   background: gray; }
-
-@media (max-width: 767px) {
-  .excerpts {
-    padding: 0; }
-    .excerpts h2, .excerpts p, .excerpts iframe {
-      padding: 0 15px !important; } }
 
 .article-nav {
   margin-top: 50px; }
