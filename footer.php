@@ -3,7 +3,7 @@
 
 		<footer>
 			
-			<?php get_footer_widgets() ?>
+			<?php nth_get_footer_widgets() ?>
 
 			<div class="footer-copyright-area">
 				<div class="container">

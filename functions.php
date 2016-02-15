@@ -1,35 +1,55 @@
 <?php
 
-add_theme_support( 'post-thumbnails' );
-
+/* THEME SETUP */
 function nth_enqueue_styles() {
-	wp_register_style( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css');
-	wp_enqueue_style( 'bootstrap');
-	wp_enqueue_style( 'nth-child-style', get_stylesheet_uri(), 'bootstrap');
+    wp_register_style( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css');
+    wp_enqueue_style( 'bootstrap');
+    wp_enqueue_style( 'nth-child-style', get_stylesheet_uri(), 'bootstrap');
 }
-
 add_action( 'wp_enqueue_scripts', 'nth_enqueue_styles' );
 
-//This theme uses wp_nav_nemu() in one location
-function nth_register_menu() {
-	register_nav_menu('main', 'Main menu');
+function nth_theme_setup() {
+    add_theme_support( 'post-thumbnails' );
+    register_nav_menu('main', 'Main menu'); // This theme uses wp_nav_menu() in one location
 }
-add_action( 'after_setup_theme', 'nth_register_menu');
+add_action( 'after_setup_theme', 'nth_theme_setup');
 
-function nth_get_menu() {
-	wp_nav_menu( array(
-        'menu'              => 'main',
-        'theme_location'    => 'main',
-        'depth'             => 1,
-        'container'         => 'ul',
-        'menu_class'        => 'nav navbar-nav'
-    ));
-}
+function nth_initialize_widgets(){
 
-function nth_allow_tags_in_excerpt() {
-    // Add custom tags to this string
-    return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>,<code>,<pre>,<blockquote>,<strong>'; 
+    register_sidebar (array(
+        'name' => __('Footer Widget Area 1', 'nth-child'),
+        'id' => 'footer1', 
+        'description' => __('Appears in the footer section of the site. Takes up the full width of the footer area. If Footer Widget Area 2 is being used, both areas will take up half of the footer each. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'nth-child'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+        )
+    );
+    
+    register_sidebar (array(
+        'name' => __('Footer Widget Area 2', 'nth-child'),
+        'id' => 'footer2', 
+        'description' => __('Appears in the footer section of the site. If Footer Widget Area 2 is being used, it will split the footer area with Footer Widget Area 1. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2. NOTE: This widget area will only show if Footer Widget Area 1 is active.', 'nth-child'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+        )
+    );
+
+    register_sidebar (array(
+        'name' => __('Sidebar Widget Area', 'nth-child'),
+        'id' => 'blog-sidebar',
+        'description' => __('The theme sidebar. Sits to the right of the main content area on large screens (limited to 300px in this case). Moves under the main content area on smaller screens (will dynamically resize in this case).', 'nth-child'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+        )
+    );
 }
+add_action('widgets_init', 'nth_initialize_widgets');
 
 function nth_customize_excerpt($nth_excerpt) {
     global $post;
@@ -90,6 +110,23 @@ function nth_customize_excerpt($nth_excerpt) {
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'nth_customize_excerpt');
 
+
+/* HELPER METHODS */
+function nth_get_menu() {
+	wp_nav_menu( array(
+        'menu'              => 'main',
+        'theme_location'    => 'main',
+        'depth'             => 1,
+        'container'         => 'ul',
+        'menu_class'        => 'nav navbar-nav'
+    ));
+}
+
+function nth_allow_tags_in_excerpt() {
+    // Add custom tags to this string
+    return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>,<code>,<pre>,<blockquote>,<strong>'; 
+}
+
 function nth_get_the_archives_link() {
     if(get_page_by_title('Archives')) {
         $page = get_page_by_title('Archives');
@@ -98,45 +135,7 @@ function nth_get_the_archives_link() {
     }
 }
 
-//Below are the widget areas
-function nth_initialize_widgets(){
-
-    register_sidebar (array(
-        'name' => __('Footer Widget Area 1', 'nth-child'),
-        'id' => 'footer1', 
-        'description' => __('Appears in the footer section of the site. Takes up the full width of the footer area. If Footer Widget Area 2 is being used, both areas will take up half of the footer each. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2.', 'nth-child'),
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-        )
-    );
-    
-    register_sidebar (array(
-        'name' => __('Footer Widget Area 2', 'nth-child'),
-        'id' => 'footer2', 
-        'description' => __('Appears in the footer section of the site. If Footer Widget Area 2 is being used, it will split the footer area with Footer Widget Area 1. On smaller screens, if both footers are active, Footer Widget Area 1 will stack on top of Footer Widget Area 2. NOTE: This widget area will only show if Footer Widget Area 1 is active.', 'nth-child'),
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-        )
-    );
-
-    register_sidebar (array(
-        'name' => __('Sidebar Widget Area', 'nth-child'),
-        'id' => 'blog-sidebar',
-        'description' => __('The theme sidebar. Sits to the right of the main content area on large screens (limited to 300px in this case). Moves under the main content area on smaller screens (will dynamically resize in this case).', 'nth-child'),
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-        )
-    );
-}
-add_action('widgets_init', 'nth_initialize_widgets');
-
-function get_footer_widgets() {
+function nth_get_footer_widgets() {
     if (is_active_sidebar( 'footer1' )) {
         echo '<div class="footer-widget-area">';
         echo '<div class="container"> <!-- footer content container -->';
@@ -208,7 +207,6 @@ function nth_get_the_date() {
     echo 'Posted on <time datetime="'. $html_datetime . '">';
     echo '<a href="' . get_month_link( $post_year, $post_month ) . '" title="See all posts from ' . $anchor_title_date  . '">' . trim($ui_date) . '</a>';
     echo '</time>';
-
 }
 
 function nth_get_the_category() {
