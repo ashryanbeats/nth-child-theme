@@ -3,14 +3,7 @@
 <div class="col-sm-9 col-md-10 col-lg-9 page"> <!-- article column -->
 	<?php while ( have_posts()) : the_post(); ?>
 
-		<article>
-			<h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
-			<?php the_post_thumbnail(); ?>
-
-			<!-- Show the feature image caption -->
-			<?php get_featured_image_caption() ?>
-			<?php the_content() ?>
-		</article>
+		<?php locate_template('nth-full-article.php', true, false) ?>
 
 	<?php endwhile; ?>
 </div> <!-- article column -->
