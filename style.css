@@ -20,7 +20,7 @@ Text Domain: nthchild
 h1 {
   font-size: 30px; }
 
-h1, p {
+h1, h2, p {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
