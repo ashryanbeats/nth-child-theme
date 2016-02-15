@@ -10,6 +10,8 @@ add_action( 'wp_enqueue_scripts', 'nth_enqueue_styles' );
 
 function nth_theme_setup() {
     add_theme_support( 'post-thumbnails' );
+    add_image_size( 'excerpt-thumb', 1000, 200, true );
+    add_image_size( 'post-image', 800, 800, false );
     register_nav_menu('main', 'Main menu'); // This theme uses wp_nav_menu() in one location
 }
 add_action( 'after_setup_theme', 'nth_theme_setup');
@@ -110,6 +112,15 @@ function nth_customize_excerpt($nth_excerpt) {
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'nth_customize_excerpt');
 
+function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'excerpt-thumb' => __('Excerpt Thumb'),
+        'post-image' => __('Post Image')
+    ) );
+}
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+
+
 
 /* HELPER METHODS */
 function nth_get_menu() {
@@ -192,7 +203,7 @@ function nth_get_featured_image() {
         nth_get_featured_image_caption();
     }
     else {
-        the_post_thumbnail('blog-thumb');
+        the_post_thumbnail('excerpt-thumb');
     }
 }
 
