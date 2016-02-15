@@ -180,10 +180,10 @@ function get_featured_image_caption() {
 
 function get_site_title() {
     if (is_home()) {
-        echo '<h1 class="navbar-brand">' . get_bloginfo('name') . '</h1>';
+        echo '<h1 class="navbar-brand"><a href="' . get_bloginfo('url') . '" title="' . get_bloginfo('name') . '">' . get_bloginfo('name') . '</a></h1>';
     }
     else {
-        echo '<div class="navbar-brand">' . get_bloginfo('name') . '</div>';
+        echo '<div class="navbar-brand"><a href="' . get_bloginfo('url') . '" title="' . get_bloginfo('name') . '">' . get_bloginfo('name') . '</a></div>';
     }
 }
 
