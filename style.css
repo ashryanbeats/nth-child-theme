@@ -42,10 +42,10 @@ a {
   text-align: center;
   margin: -15px 0 20px 0; }
 
-p, blockquote {
+p, blockquote, pre {
   margin-bottom: 20px; }
 
-p + blockquote {
+p + blockquote, p + pre {
   margin-top: -10px; }
 
 blockquote {
@@ -54,6 +54,20 @@ blockquote {
   border-left: 5px solid #e7e7e7;
   width: 85%;
   padding: 0px 0px 0px 15px; }
+
+code {
+  color: #e7e7e7;
+  background-color: black;
+  font-weight: 600; }
+
+pre {
+  overflow-x: auto;
+  color: #e7e7e7;
+  background-color: black; }
+
+pre code {
+  overflow-wrap: normal;
+  white-space: pre; }
 
 .navbar-container {
   margin-top: 10px;
