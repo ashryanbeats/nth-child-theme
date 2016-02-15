@@ -17,7 +17,6 @@
 			<li><?php posts_nav_link('', '<< Newer posts', 'Older posts >>') ?></li>
 			<?php nth_get_the_archives_link() ?>
 		</ul>
-
 	</nav>
 </div> <!-- article column -->
 	
