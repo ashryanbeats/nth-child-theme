@@ -1,4 +1,4 @@
-<div class="sidebar col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3"> <!-- sidebar column -->
+<div class="sidebar col-sm-3 col-md-2"> <!-- sidebar column -->
 	
 	<?php if (is_active_sidebar('blog-sidebar')) : ?>
 		<?php dynamic_sidebar('blog-sidebar'); ?>

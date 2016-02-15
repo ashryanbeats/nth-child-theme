@@ -149,7 +149,7 @@ pre code {
   .article-nav ul > li {
     list-style: none; }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .sidebar:before {
     content: "";
     display: block;
@@ -165,7 +165,7 @@ pre code {
 .widget li {
   list-style: none; }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .widget h2 {
     text-align: center; }
   .widget ul {

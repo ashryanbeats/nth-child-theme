@@ -1,5 +1,5 @@
 .sidebar {
-	@media (max-width: 991px) {
+	@media (max-width: 767px) {
 
 		&:before{
 		    @include hr-like-content;
@@ -16,7 +16,7 @@
 		list-style: none;
 	}
 
-	@media (max-width: 991px) {
+	@media (max-width: 767px) {
 		h2 {
 			text-align: center;
 		}

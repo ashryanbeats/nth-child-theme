@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<div class="col-md-10 excerpts"> <!-- article column -->
+<div class="col-sm-9 col-md-10 excerpts"> <!-- article column -->
 	<?php while ( have_posts()) : the_post(); ?>
 		<article>
 			<a href="<?php the_permalink() ?>" title="<?php the_title() ?>">
