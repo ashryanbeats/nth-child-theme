@@ -11,7 +11,7 @@ Todos:
 - <s>sticky posts</s>
 - <s>remove date from pages</s>
 - <s>featured images link to permalink</s>
-- try search
+- <s>try search</s>
 
 Off VVV:
 
