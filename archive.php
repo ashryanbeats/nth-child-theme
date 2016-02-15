@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="col-sm-9 col-md-10 col-lg-9 single"> <!-- archive column -->
+<div class="col-sm-9 col-md-10 col-lg-9 single full-width-featured-images"> <!-- archive column -->
 	
 	<h1>This is the archive for 
 		<?php if (is_category()) : ?>

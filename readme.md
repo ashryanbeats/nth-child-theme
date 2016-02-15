@@ -11,3 +11,4 @@ Todos:
 - control the number of posts that show up on `home.php`
 - sticky posts
 - responsive video
+- remove date from pages
