@@ -168,7 +168,7 @@ function get_footer_widgets() {
     }              
 }
 
-function get_featured_image_caption() {
+function nth_get_featured_image_caption() {
     if (has_post_thumbnail()) {
         $featured_image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
     }
@@ -178,12 +178,22 @@ function get_featured_image_caption() {
     }
 }
 
-function get_site_title() {
+function nth_get_site_title() {
     if (is_home()) {
         echo '<h1 class="navbar-brand"><a href="' . get_bloginfo('url') . '" title="' . get_bloginfo('name') . '">' . get_bloginfo('name') . '</a></h1>';
     }
     else {
         echo '<div class="navbar-brand"><a href="' . get_bloginfo('url') . '" title="' . get_bloginfo('name') . '">' . get_bloginfo('name') . '</a></div>';
+    }
+}
+
+function nth_get_featured_image() {
+    if(is_single() || is_page()) {
+        the_post_thumbnail();
+        nth_get_featured_image_caption();
+    }
+    else {
+        the_post_thumbnail('blog-thumb');
     }
 }
 

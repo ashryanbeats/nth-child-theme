@@ -14,7 +14,7 @@
 		<div class="container navbar-container"> <!-- navbar container -->
 			<nav class="navbar">
 				<div class="navbar-header">
-					<?php get_site_title() ?>
+					<?php nth_get_site_title() ?>
 				</div>
 
 				<?php nth_get_menu(); ?>	
