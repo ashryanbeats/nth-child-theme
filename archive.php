@@ -29,12 +29,8 @@
 		</article>	
 	<?php endwhile ?>
 
-	<nav class="article-nav text-center">
-		<ul>
-			<li><?php posts_nav_link('', '<< Newer posts', 'Older posts >>') ?></li>
-			<?php nth_get_the_archives_link() ?>
-		</ul>
-	</nav>
+	<?php locate_template('nth-article-nav.php', true, false) ?>
+	
 </div> <!-- archive column -->
 
 <?php get_sidebar(); ?>
