@@ -204,3 +204,5 @@ footer {
     @media (max-width: 991px) {
       footer .footer-copyright-area {
         text-align: center; } }
+    footer .footer-copyright-area a {
+      color: #ffd095; }
