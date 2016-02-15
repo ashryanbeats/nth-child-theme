@@ -197,4 +197,35 @@ function nth_get_featured_image() {
     }
 }
 
+function nth_get_the_date() {
+
+    $html_datetime = get_the_date( 'Y-m-d' );
+    $ui_date = get_the_date( 'D, M j Y' );
+    $anchor_title_date = get_the_date( 'M Y' );
+    $post_year  = get_the_time('Y');
+    $post_month = get_the_time('m');
+            
+    echo 'Posted on <time datetime="'. $html_datetime . '">';
+    echo '<a href="' . get_month_link( $post_year, $post_month ) . '" title="See all posts from ' . $anchor_title_date  . '">' . trim($ui_date) . '</a>';
+    echo '</time>';
+
+}
+
+function nth_get_the_category() {
+
+    $categories = get_the_category();
+    $separator = ', ';
+    $output = 'in ';
+
+    if($categories){
+ 
+        foreach($categories as $category) {
+            $output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in \"%s\"" ), $category->name ) ) . '"><span class="nth-category">'.$category->cat_name.'</span></a>'.$separator;
+        }
+ 
+        echo trim($output, $separator);
+
+    }
+}
+
 ?>

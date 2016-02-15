@@ -1,2 +1,7 @@
-<h2><?php the_title() ?></h2>
-<p class="post-date"><time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date( 'D, M j Y' ); ?></time></p>
+<p class="nth-taxonomy">
+	
+	<?php nth_get_the_date() ?>
+
+	<?php nth_get_the_category() ?>
+
+</p>

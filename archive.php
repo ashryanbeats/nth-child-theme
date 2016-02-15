@@ -8,11 +8,11 @@
 		<?php elseif (is_tag()) : ?>
 			posts tagged with "<?php single_tag_title() ?>".
 		<?php elseif (is_day()) : ?>	
-			posts published on <?php echo get_the_date() ?>.
+			<?php echo get_the_date() ?>.
 		<?php elseif (is_month()) : ?>
-			posts published in <?php echo get_the_date('F Y') ?>.
+			<?php echo get_the_date('F Y') ?>.
 		<?php elseif (is_year()) : ?>
-			posts published in <?php echo get_the_date('Y') ?>.
+			<?php echo get_the_date('Y') ?>.
 		<?php else : ?>
 			your selection.
 		<?php endif ?>
