@@ -105,6 +105,10 @@ pre code {
 	@media (max-width: 767px) {
 		padding: 0;
 
+		h1, h2, h3, p {
+			padding: 0 15px !important;
+		}
+
 		& article {
 			h1, h2, h3, h4, h5, h6, & > p, & > iframe, & > div, dl, address, .wp-caption {
 				padding: 0 15px !important;
