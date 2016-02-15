@@ -56,14 +56,14 @@ blockquote {
   padding: 0px 0px 0px 15px; }
 
 code {
-  color: #e7e7e7;
-  background-color: black;
+  color: white;
+  background-color: #808080;
   font-weight: 600; }
 
 pre {
   overflow-x: auto;
-  color: #e7e7e7;
-  background-color: black; }
+  color: white;
+  background-color: #808080; }
 
 pre code {
   overflow-wrap: normal;

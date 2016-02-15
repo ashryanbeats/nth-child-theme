@@ -58,15 +58,15 @@ blockquote {
 }
 
 code {
-	color: $dark-gray;
-	background-color: black;
+	color: $white;
+	background-color: $darkest-gray;
 	font-weight: 600;
 }
 
 pre {
 	overflow-x: auto;
-	color: $dark-gray;
-	background-color: black;
+	color: $white;
+	background-color: $darkest-gray;
 }
 
 pre code {
