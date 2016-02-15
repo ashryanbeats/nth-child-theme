@@ -12,3 +12,4 @@ Todos:
 - remove date from pages
 - test markdown support
 - responsive video
+- featured images link to permalink

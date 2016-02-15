@@ -93,8 +93,10 @@ pre code {
 @media (max-width: 767px) {
   .full-width-featured-images {
     padding: 0; }
-    .full-width-featured-images h1, .full-width-featured-images h2, .full-width-featured-images h3, .full-width-featured-images h4, .full-width-featured-images h5, .full-width-featured-images h6, .full-width-featured-images p, .full-width-featured-images > iframe, .full-width-featured-images > li, .full-width-featured-images > div, .full-width-featured-images dl, .full-width-featured-images address, .full-width-featured-images .wp-caption {
+    .full-width-featured-images article h1, .full-width-featured-images article h2, .full-width-featured-images article h3, .full-width-featured-images article h4, .full-width-featured-images article h5, .full-width-featured-images article h6, .full-width-featured-images article > p, .full-width-featured-images article > iframe, .full-width-featured-images article > div, .full-width-featured-images article dl, .full-width-featured-images article address, .full-width-featured-images article .wp-caption {
       padding: 0 15px !important; }
+    .full-width-featured-images li {
+      padding-right: 15px; }
     .full-width-featured-images pre {
       border-radius: 0; }
     .full-width-featured-images .wp-post-image {
