@@ -17,5 +17,7 @@
 			</div> <!-- footer copyright area -->
 		</footer>
 	</div> <!-- site container -->
+	
+	<?php wp_footer(); ?>
 </body>
 </html>
